@@ -6,15 +6,31 @@
   </head>
   <body>
     <p>
-      <ul>
-      {% for week in schedule %}
-        <li>{{ week }}</li>
-          {% for childs in week.child.all %}
-          <li>{{ childs }}</li>
+          {% for weeks in schedule %}
+          <h1>{{weeks}}</h1>
+          <ul>
+          <li >{{ weeks.num_child }}</li>
+          </ul>
           {% endfor %}
-      {% endfor %}
-      
-      </ul>
+          <a id='hi'> hi </a>
+
     </p>
   </body>
 </html>
+
+<script type="text/javascript"> 
+   window.onload = function addNums() {
+
+    // var schedule = '{{schedule.num_child}}';
+    // console.log(schedule);
+    
+    console.log('{{schedule}}')
+    // var spotsTaken = '{{ weeks.num_child }}'; 
+    // var spotsAvail = 6 - spotsTaken;
+    
+    // console.log(spotsTaken);
+   
+  }
+
+</script> 
+  
