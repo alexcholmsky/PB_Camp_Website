@@ -10,17 +10,21 @@ from rest_framework.response import Response
 
 from .models import Week, Child
 
-# Create your views here
-def schedule(request):
-    schedule = Week.objects.annotate(num_child = Count('child'))
-# makes the same query as a .all query, but adds new field that can be accessed (based off existing field)
-    context = {
-        'schedule': schedule
-    }
-    return render(request, 'schedule/calendar.html', context)
+# from json import dumps
 
-# class NumberChildren(APIView):
-#     def get(self, request, format=None):
-#         week = Week.objects.annotate(num_child = Count('child'))
-#         serializer = ScheduleSerializer(week, many=True)
-#         return Response(serializer.data)
+# Create your views here
+# def schedule(request):
+#     schedule = Week.objects.annotate(num_child = Count('child'))
+# makes the same query as a .all query, but adds new field that can be accessed (based off existing field)
+    # context = {
+    #     'schedule': schedule
+    # }
+ # dump data
+    # dataJSON = dumps(context)
+    # return render(request, 'schedule/calendar.html', {'data': dataJSON})
+
+class NumberChildren(APIView):
+    def get(self, request, format=None):
+        week = Week.objects.annotate(num_child = Count('child'))
+        serializer = ScheduleSerializer(week, many=True)
+        return Response(serializer.data)
