@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    {% comment %} meta {% endcomment %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% comment %} bootstrap css {% endcomment %}
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <title>{% block title %}Premium Babysitting{% endblock %}</title>
+  </head>
+  <body> 
+    <nav class='navbar navbar-expand-md' style="background-color: #fff">
+        <div class="container-fluid">
+            <a class="navbar-brand" href='/'>
+                <img src={% static 'schedule/images/pb_logo.png'%} style="max-height: 70px">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id='mainNavbar'>
+                <div class="navbar-nav">
+                    <a class="nav-link text-dark" href="/">Home</a>
+                    <a class="nav-link text-dark" href="/schedule">Calendar</a>
+                    <a class="nav-link text-dark" href="/profiles">About Our Counsellors</a>
+                    <a class="nav-link text-dark" href="/">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class='wrapper' style= "background-color: #0d6efd$blue-400">
+
+    {% comment %} if you come across a block called content, put it here inside the base template{% endcomment %}
+        {%block content%} 
+        {% endblock%}
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </div>
+  </body>
+</html>

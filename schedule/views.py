@@ -13,6 +13,21 @@ from .models import Week, Child
 # from json import dumps
 
 # Create your views here
+def home(response):
+    return render(response, "schedule/home.html")
+
+def schedule(response):
+    return render(response, "schedule/calendar.html")
+
+class NumberChildren(APIView):
+    def get(self, request, format=None):
+        week = Week.objects.annotate(num_child = Count('child'))
+        serializer = ScheduleSerializer(week, many=True)
+        return Response(serializer.data)
+
+
+
+
 # def schedule(request):
 #     schedule = Week.objects.annotate(num_child = Count('child'))
 # makes the same query as a .all query, but adds new field that can be accessed (based off existing field)
@@ -22,9 +37,3 @@ from .models import Week, Child
  # dump data
     # dataJSON = dumps(context)
     # return render(request, 'schedule/calendar.html', {'data': dataJSON})
-
-class NumberChildren(APIView):
-    def get(self, request, format=None):
-        week = Week.objects.annotate(num_child = Count('child'))
-        serializer = ScheduleSerializer(week, many=True)
-        return Response(serializer.data)
