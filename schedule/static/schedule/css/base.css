@@ -1,0 +1,9 @@
+.active {
+    text-decoration: underline;
+}
+
+.signup {
+    background-color: rgb(142, 142, 255);
+    color: white;
+    border-radius: 8px;
+}
