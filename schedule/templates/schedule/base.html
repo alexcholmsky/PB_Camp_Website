@@ -34,9 +34,6 @@
     </nav>
 
     <div class='wrapper' style= "background-color: #0d6efd$blue-400">
-        <p class='red'>
-        Testing
-        </p>
     {% comment %} if you come across a block called content, put it here inside the base template{% endcomment %}
         {%block content%} 
         {% endblock%}
@@ -45,18 +42,30 @@
   </body>
 </html>
 
+
 {% block javascript %}
+{% endblock%}
 
 <script>
-document.addEventListener("DOMContentLoaded", function() {
- document.getElementById('homeButton').classList.add("active");
+
+function changeActive(activeTab) {
+    document.getElementById(activeTab).classList.add("active");
+}
+
+document.addEventListener("DOMContentLoaded", changeActive(activeTab)) 
+
+{% comment %} document.addEventListener("DOMContentLoaded", function(activeTab) {
+ var activeTab = 'homeButton'
+ document.getElementById(activeTab).classList.add("active");
  console.log('working');
-})
+}) {% endcomment %}
 
 </script>
 
 
-{% endblock%}
+
+
+
 
 
 
