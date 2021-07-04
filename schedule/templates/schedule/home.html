@@ -1,15 +1,22 @@
 {% extends "schedule/base.html" %}
 {% load static %}
 {% block content%}
-    <body id='backgroundImage' style="background-image: url({% static 'schedule/images/eric_right.jpg' %})">
-    
-    </body>
 
 {% endblock %}
 
 {% block javascript %}
 <script>
 var activeTab = 'homeButton'
+
+function addBGImage() {
+var body = document.getElementsByTagName("BODY")[0] 
+
+body.style.backgroundImage = "url({% static 'schedule/images/eric_right.jpg' %})";
+body.classList.add("bgImage");
+    console.log('done')
+}
+document.addEventListener("DOMContentLoaded", addBGImage())
+
 </script>
 {% endblock %}
 
