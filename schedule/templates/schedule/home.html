@@ -1,6 +1,8 @@
 {% extends "schedule/base.html" %}
+{% load static %}
 {% block content%}
-<p> hi <p>
+    <body id='backgroundImage' style="background-image: url({% static 'schedule/images/eric_right.jpg' %})">
+    </body>
 
 {% endblock %}
 
@@ -8,6 +10,5 @@
 <script>
 var activeTab = 'homeButton'
 </script>
-
 {% endblock %}
 
