@@ -9,6 +9,25 @@
 {% block javascript %}
 <script>
 var activeTab = 'calendarButton'
+
+fetch('/api/v1')
+    .then(response =>
+        response.json()
+        )
+    .then(data => {
+        let schedule = data
+        console.log(schedule)
+        for (let i=0; i < schedule.length; ++i) {
+            let startDate = schedule[i].start_date;
+            let endDate = schedule[i].end_date;
+            let numChild = schedule[i].num_child;
+            let para = document.createElement('p');
+            let br = document.createElement('br');
+            para.innerHTML = 'Start Date: ' + startDate + ' ' + 'End Date: ' + endDate + ' ' + 'Number of Children: ' + numChild;
+            document.body.appendChild(para);
+            console.log('done')
+        }
+    })
 </script>
 
 {% endblock%}
