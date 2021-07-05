@@ -15,3 +15,23 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.test {
+    position: relative;
+    /* to move elements position must be set to relative */
+    color: white;
+    height: 9vw;
+    width: 24vw;
+    padding: 5px;
+    border: 3px solid white; 
+    margin: 0px;
+    font-size: 60px;
+    top: 11vw;
+    left: 4vw;
+}
+
+.learnMore {
+    position: relative;
+    top: 13vw;
+    left: 10vw;
+}
