@@ -21,17 +21,19 @@
     /* to move elements position must be set to relative */
     color: white;
     height: 9vw;
-    width: 24vw;
+    width: 28vw;
     padding: 5px;
     border: 3px solid white; 
     margin: 0px;
-    font-size: 60px;
-    top: 11vw;
-    left: 4vw;
+    font-size: 58px;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-weight: bold;
+    top: 18vw;
+    left: 3.3vw;
 }
 
 .learnMore {
     position: relative;
-    top: 13vw;
-    left: 10vw;
+    top: 20vw;
+    left: 11.3vw;
 }
