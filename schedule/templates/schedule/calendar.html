@@ -3,9 +3,11 @@
 <table id='calendar' class="table">
   <thead>
     <tr>
-      <th scope="col">Dates</th>
-      <th scope="col">Spots Availible</th>
-      <th scope="col">Price</th>
+      <th scope="col">Week</th>
+      <th scope="col">Start Date</th>
+      <th scope="col">End Date</th>
+      <th scope="col">Spots Available</th>
+      <th scope="col">Price Per Child</th>
     </tr>
   </thead>
   <tbody>
@@ -20,28 +22,34 @@
 <script>
 var activeTab = 'calendarButton'
 
+function createCells(row, cellOptions){
+  for(e=0; e < 5; e++){
+  console.log(e);
+  row.insertCell(e).innerHTML = cellOptions[e];
+  }
+}
+
 fetch('/api/v1')
     .then(response =>
         response.json()
         )
     .then(data => {
         let schedule = data
-        console.log(schedule)
+        let price = '$150 per week'
+        let table = document.getElementById("calendar");
         for (let i=0; i < schedule.length; ++i) {
-            let startDate = schedule[i].start_date;
-            let endDate = schedule[i].end_date;
-            let numChild = schedule[i].num_child;
-            let table = document.getElementById("calendar");
-            // Create an empty <tr> element and add it to the 1st position of the table:
-            var row = table.insertRow(i+1);
-            var cell1 = row.insertCell(0);
-            cell1.innerHTML = startDate +' ' + endDate;
-            var cell2 = row.insertCell(1)
-            cell2.innerHTML = numChild;
-            console.log('Done')
+          let startDate = schedule[i].start_date;
+          let endDate = schedule[i].end_date;
+          let numSpots = 6 - schedule[i].num_child;
+          let cellOptions = [i+1, startDate, endDate, numSpots, price]
+          // Create an empty <tr> element and add it to the xth position of the table:
+          let row = table.insertRow(i+1);
+
+          createCells(row, cellOptions); 
         }
     })
 </script>
 
 {% endblock%}
-  
+
+
