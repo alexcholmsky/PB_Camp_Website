@@ -1,6 +1,16 @@
 {% extends "schedule/base.html" %}
 {% block content%}
-<p> calendar <p>
+<table id='calendar' class="table">
+  <thead>
+    <tr>
+      <th scope="col">Dates</th>
+      <th scope="col">Spots Availible</th>
+      <th scope="col">Price</th>
+    </tr>
+  </thead>
+  <tbody>
+  </tbody>
+</table>
 
 
 {% endblock %}
@@ -21,11 +31,14 @@ fetch('/api/v1')
             let startDate = schedule[i].start_date;
             let endDate = schedule[i].end_date;
             let numChild = schedule[i].num_child;
-            let para = document.createElement('p');
-            let br = document.createElement('br');
-            para.innerHTML = 'Start Date: ' + startDate + ' ' + 'End Date: ' + endDate + ' ' + 'Number of Children: ' + numChild;
-            document.body.appendChild(para);
-            console.log('done')
+            let table = document.getElementById("calendar");
+            // Create an empty <tr> element and add it to the 1st position of the table:
+            var row = table.insertRow(i+1);
+            var cell1 = row.insertCell(0);
+            cell1.innerHTML = startDate +' ' + endDate;
+            var cell2 = row.insertCell(1)
+            cell2.innerHTML = numChild;
+            console.log('Done')
         }
     })
 </script>

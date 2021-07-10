@@ -20,20 +20,24 @@
     position: relative;
     /* to move elements position must be set to relative */
     color: white;
-    height: 9vw;
     width: 28vw;
     padding: 5px;
     border: 3px solid white; 
     margin: 0px;
-    font-size: 58px;
+    font-size: 35px;
     font-family: Tahoma, Verdana, sans-serif;
     font-weight: bold;
+    text-align: center;
     top: 18vw;
-    left: 3.3vw;
+    left: 3.0vw;
 }
 
 .learnMore {
     position: relative;
     top: 20vw;
     left: 11.3vw;
+}
+
+#calendar {
+    width: 80%;
 }
