@@ -1,0 +1,38 @@
+{% extends "schedule/base.html" %}
+{% load static %}
+{% block content%}
+
+<div class='wrapper'>
+    <div class='header'> 
+        About Us 
+    </div> 
+
+    <div>
+        <img id='alex' class='aboutBox' src={% static 'schedule/images/cloud_clipart.png' %}>
+
+    </div>
+
+    <div>
+        <img id='lucas' class='aboutBox' src={% static 'schedule/images/cloud_clipart.png' %}>
+    </div>
+</div>
+
+{% comment %} <div>
+    <video class='aboutVideo' muted autoplay loop>
+        <source src={% static "schedule/images/website_vid.MP4" %}>
+    </video>
+</div> {% endcomment %}
+
+{% endblock %}
+
+{% block javascriptvar %}
+<script>
+var activeTab = 'aboutUsButton'
+</script>
+{% endblock%}
+
+{% block javascriptmethod %}
+<script>
+addBGImage("url({% static 'schedule/images/Cloud_wallpaper.jpg' %})")
+</script>
+{% endblock %}

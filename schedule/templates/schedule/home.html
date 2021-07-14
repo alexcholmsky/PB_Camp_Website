@@ -1,27 +1,26 @@
 {% extends "schedule/base.html" %}
 {% load static %}
 {% block content%}
-    <div class='test'>
+    <div class='headerbox'>
         Let the Fun Begin!
     </div>
     <div>
-        <button type="button" class="btn signup learnMore btn-lg" onclick="window.location.href='/about'">Learn More</button>
+        <button type="button" class="btn actionButton learnMore btn-lg" onclick="window.location.href='/about'">Learn More</button>
     </div>
 {% endblock %}
 
-{% block javascript %}
+{% block javascriptvar %}
 <script>
+
 var activeTab = 'homeButton'
-
-function addBGImage() {
-var body = document.getElementsByTagName("BODY")[0] 
-
-body.style.backgroundImage = "url({% static 'schedule/images/eric_right.jpg' %})";
-body.classList.add("bgImage");
-    console.log('done')
-}
-document.addEventListener("DOMContentLoaded", addBGImage())
 
 </script>
 {% endblock %}
 
+{% block javascriptmethod %}
+<script>
+
+document.addEventListener("DOMContentLoaded", addBGImage('scheduleimages/eric_right.jpg'))
+
+</script>
+{% endblock%}

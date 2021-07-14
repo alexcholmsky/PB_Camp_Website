@@ -1,5 +1,12 @@
 {% extends "schedule/base.html" %}
+{% load static%}
 {% block content%}
+<br>
+<div style='text-align:center'>
+Ready to register? 
+<button class="btn actionButton  btn-lg"> Click here </button>
+</div>
+<br>
 <table id='calendar' class="table">
   <thead>
     <tr>
@@ -18,10 +25,18 @@
 {% endblock %}
 
 
-{% block javascript %}
+{% block javascriptvar%}
 <script>
 var activeTab = 'calendarButton'
 
+</script>
+
+{% endblock%}
+
+
+{% block javascriptmethod %}
+
+<script>
 function createCells(row, cellOptions){
   for(e=0; e < 5; e++){
   console.log(e);
@@ -49,7 +64,6 @@ fetch('/api/v1')
         }
     })
 </script>
-
 {% endblock%}
 
 

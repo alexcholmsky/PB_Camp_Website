@@ -1,8 +1,19 @@
+.aboutVideo{
+    width: 100vw;
+}
+
+.aboutBox {
+    position: absolute;
+    /* transform: rotate(90deg); */
+    top: 45vh;
+    font-family: Tahoma, Verdana, sans-serif;
+    width: 20vw;
+}
 .active {
     text-decoration: underline;
 }
 
-.signup {
+.actionButton {
     background-color: rgb(142, 142, 255);
     color: rgb(255, 255, 255);
     border-radius: 8px;
@@ -15,8 +26,17 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+.header {
+    position: relative;
+    /* to move elements position must be set to relative */
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+    font-family: Tahoma, Verdana, sans-serif;
+    font-weight: bold;
+    text-align: center;
 
-.test {
+}
+.headerbox {
     position: relative;
     /* to move elements position must be set to relative */
     color: white;
@@ -38,6 +58,27 @@
     left: 11.3vw;
 }
 
+.register {
+    position: relative;
+    top: 20vw;
+    left: 11.3vw;
+}
+
+
+/* .wrapper {
+    background-color: rgb(142, 142, 255);
+} */
+
 #calendar {
     width: 80%;
+}
+
+#alex {
+    
+    left: 20vw;
+}
+
+#lucas {
+    
+    left: 70vw;
 }
