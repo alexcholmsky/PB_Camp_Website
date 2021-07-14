@@ -5,9 +5,10 @@
 .aboutBox {
     position: absolute;
     /* transform: rotate(90deg); */
-    top: 45vh;
+    top: 25vh;
+    height: 70vh;
+    width: 30vw;
     font-family: Tahoma, Verdana, sans-serif;
-    width: 20vw;
 }
 .active {
     text-decoration: underline;
@@ -26,6 +27,13 @@
     background-size: cover;
     background-repeat: no-repeat;
 }
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
 .header {
     position: relative;
     /* to move elements position must be set to relative */
@@ -74,11 +82,18 @@
 }
 
 #alex {
-    
-    left: 20vw;
+    left: 10vw;
+}
+
+#atext {
+    position: absolute;
 }
 
 #lucas {
     
-    left: 70vw;
+    left: 60vw;
+}
+
+#ltext {
+    position: absolute;
 }

@@ -59,11 +59,12 @@ body.classList.add("bgImage");
 }
 
 document.addEventListener("DOMContentLoaded", changeActive(activeTab)) 
-addBGImage("url({% static 'schedule/images/eric_right.jpg' %})")
+
 </script>
 
 
 {% block javascriptmethod %}
+addBGImage("url({% static 'schedule/images/eric_right.jpg' %})")
 {% endblock%}
 
 
