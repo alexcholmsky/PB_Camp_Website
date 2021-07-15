@@ -5,8 +5,8 @@
 .aboutBox {
     position: absolute;
     /* transform: rotate(90deg); */
-    top: 25vh;
-    height: 70vh;
+    top: 2vh;
+    height: 71vh;
     width: 30vw;
     font-family: Tahoma, Verdana, sans-serif;
 }
@@ -30,8 +30,11 @@
 
 .container {
     position: relative;
-    text-align: center;
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
   }
 
 .header {
@@ -60,16 +63,57 @@
     left: 3.0vw;
 }
 
+.headshot {
+    position: absolute;
+    width: 10vw;
+    top: 9vh;
+    padding: 0px;
+    background-color: black;
+    border: 2px solid black;
+}
+
+.grid {
+    
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    height:72vh;
+    /* position: relative; */
+}
+
+.grid > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+ 
+  }
+
 .learnMore {
     position: relative;
     top: 20vw;
     left: 11.3vw;
 }
 
+.profile {
+    position: absolute;
+    top: 33vh;
+    color: black;
+    font-size: small;
+
+}
+
 .register {
     position: relative;
     top: 20vw;
     left: 11.3vw;
+}
+
+.wrapper {
+  /* padding: 100px 30px; */
+  width: 100%;
+  margin: 0 auto;
+  /* max-width: 9; */
 }
 
 
@@ -82,18 +126,34 @@
 }
 
 #alex {
-    left: 10vw;
+    /* left: 10vw; */
+    grid-column: 1;
+    grid-row: 1;
+}
+#alexcloud {
+    /* left: 10vw; */
 }
 
 #atext {
-    position: absolute;
+
+    /* left: 25vw; */
+}
+
+#aleximage {
+    /* left: 25vw; */
 }
 
 #lucas {
     
-    left: 60vw;
+    /* left: 60vw; */
+    grid-column: 2;
+    grid-row: 1;
 }
 
-#ltext {
-    position: absolute;
-}
+/* #ltext {
+    
+} */
+
+/* #lucasimage {
+    left: 65vw;
+} */
