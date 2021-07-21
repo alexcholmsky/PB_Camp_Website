@@ -28,6 +28,25 @@
     background-repeat: no-repeat;
 }
 
+.bigText {
+    animation-name: bigText;
+    animation-duration:3s;
+}
+
+@keyframes bigText {
+    from {
+        font-size: 75%;
+        width: 18%;
+        left: 7vw;
+    }
+    65% {
+        font-size: 240%;
+        width: 35%;
+        left: 0vw;
+    }
+
+}
+
 .container {
     position: relative;
     color: white;
@@ -72,6 +91,25 @@
     border: 2px solid black;
 }
 
+.fade-in {
+	opacity: 1;
+	animation-name: fadeInOpacity;
+	animation-duration: 6s;
+}
+
+@keyframes fadeInOpacity {
+	from {
+		opacity: 0;
+	}
+    50% {
+        opacity:0;
+    }
+    
+	to {
+		opacity: 1;
+	}
+}
+
 .grid {
     
     display: grid;
@@ -107,6 +145,18 @@
     position: relative;
     top: 20vw;
     left: 11.3vw;
+}
+
+.slide-in {
+    width: 100px;
+    height: 100px;
+    background: red;
+    transition: width 2s;
+}
+      
+slide-in:hover {
+        width: 300px;
+
 }
 
 .wrapper {

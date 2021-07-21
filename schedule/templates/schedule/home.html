@@ -1,15 +1,17 @@
 {% extends "schedule/base.html" %}
 {% load static %}
 {% block content%}
-    <div class='headerbox'>
+    <div class='bigText headerbox letters'>
         Let the Fun Begin!
     </div>
     <div>
-        <button type="button" class="btn actionButton learnMore btn-lg" onclick="window.location.href='/about'">Learn More</button>
+        <button type="button" class="fade-in btn actionButton learnMore btn-lg" onclick="window.location.href='/about'">Learn More</button>
     </div>
 {% endblock %}
 
 {% block javascriptvar %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</script>
 <script>
 
 var activeTab = 'homeButton'
@@ -22,5 +24,6 @@ var activeTab = 'homeButton'
 
 document.addEventListener("DOMContentLoaded", addBGImage('scheduleimages/eric_right.jpg'))
 addBGImage("url({% static 'schedule/images/eric_right.jpg' %})")
+
 </script>
 {% endblock%}

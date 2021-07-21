@@ -22,6 +22,9 @@ def schedule(response):
 def aboutus(response):
     return render(response, "schedule/aboutus.html")
 
+def signup(response):
+    return render(response, 'schedule/signup.html')
+
 class NumberChildren(APIView):
     def get(self, request, format=None):
         week = Week.objects.annotate(num_child = Count('child'))
