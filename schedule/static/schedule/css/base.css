@@ -10,6 +10,13 @@
     width: 30vw;
     font-family: Tahoma, Verdana, sans-serif;
 }
+
+.aclouds {
+    height: 30vh;
+    width: 20vw;
+    position: absolute;
+}
+
 .active {
     text-decoration: underline;
 }
@@ -46,6 +53,7 @@
     }
 
 }
+
 
 .container {
     position: relative;
@@ -92,6 +100,22 @@
 }
 
 .fade-in {
+opacity: 1;
+animation-name: fadeInOpacity;
+animation-duration: 3s;
+}
+
+@keyframes fadeInOpacity {
+from {
+    opacity: 0;
+}
+
+to {
+    opacity: 1;
+}
+}
+
+.fade-in-long {
 	opacity: 1;
 	animation-name: fadeInOpacity;
 	animation-duration: 6s;
@@ -104,7 +128,7 @@
     50% {
         opacity:0;
     }
-    
+
 	to {
 		opacity: 1;
 	}
@@ -148,15 +172,19 @@
 }
 
 .slide-in {
-    width: 100px;
-    height: 100px;
-    background: red;
-    transition: width 2s;
+    animation-name: slide-in;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
 }
-      
-slide-in:hover {
-        width: 300px;
 
+@keyframes slide-in{
+    from {
+        left:0px;
+    }
+
+    to {
+        left: 400px;
+    }
 }
 
 .wrapper {
@@ -165,11 +193,6 @@ slide-in:hover {
   margin: 0 auto;
   /* max-width: 9; */
 }
-
-
-/* .wrapper {
-    background-color: rgb(142, 142, 255);
-} */
 
 #calendar {
     width: 80%;
@@ -180,17 +203,52 @@ slide-in:hover {
     grid-column: 1;
     grid-row: 1;
 }
-#alexcloud {
-    /* left: 10vw; */
+
+#clouds {
+    position: absolute;
 }
 
-#atext {
-
-    /* left: 25vw; */
+#cloud1{
+    left: 4vw;
+    top: 20vh;
 }
 
-#aleximage {
-    /* left: 25vw; */
+#cloud2{
+    left: 12vw;
+    top: 60vh;
+}
+
+#cloud3{
+    left: 30vw;
+    top: 35vh;
+}
+
+#cloud4{
+    left: 40vw;
+    top: 3vh;
+}
+
+#cloud5{
+    
+    left: 55vw;
+    top: 50vh;
+}
+
+#cloud6{
+    left: 65vw;
+    top: 13vh;
+}
+
+#cloud7{
+    left: 85vw;
+    top: 42vh;
+}
+
+#cloudsbackground { 
+    background-color: rgb(75, 110, 224);
+    position: fixed;
+    width: 100%;
+    height: 100%;
 }
 
 #lucas {
@@ -200,10 +258,3 @@ slide-in:hover {
     grid-row: 1;
 }
 
-/* #ltext {
-    
-} */
-
-/* #lucasimage {
-    left: 65vw;
-} */
