@@ -54,7 +54,32 @@
 
 }
 
+.cloud-grow {
+    animation-name: cloud-grow;
+    animation-duration: 7s;
+    animation-fill-mode: forwards;
+}
 
+@keyframes cloud-grow {
+    from {
+        height: 30vh;
+        width: 20vw;
+        top: 35vh
+    }
+
+    30% {
+        height: 30vh;
+        width: 20vw;
+        top: 35vh
+
+    }
+
+    to {
+        height: 71vh;
+        width: 30vw;
+        top: 2vh;
+    }
+}
 .container {
     position: relative;
     color: white;
@@ -99,29 +124,33 @@
     border: 2px solid black;
 }
 
-.fade-in {
-opacity: 1;
-animation-name: fadeInOpacity;
-animation-duration: 3s;
-}
-
-@keyframes fadeInOpacity {
-from {
-    opacity: 0;
-}
-
-to {
+.fade-in-text {
     opacity: 1;
-}
+    animation-name: fadeInText;
+    animation-duration: 7s;
+    }
+    
+    @keyframes fadeInText {
+    from {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
 }
 
 .fade-in-long {
 	opacity: 1;
-	animation-name: fadeInOpacity;
+	animation-name: fadeInLong;
 	animation-duration: 6s;
 }
 
-@keyframes fadeInOpacity {
+@keyframes fadeInLong {
 	from {
 		opacity: 0;
 	}
@@ -134,6 +163,8 @@ to {
 	}
 }
 
+
+
 .grid {
     
     display: grid;
@@ -145,7 +176,6 @@ to {
 }
 
 .grid > div {
-    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 20px 0;
  
@@ -173,7 +203,7 @@ to {
 
 .slide-in {
     animation-name: slide-in;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-fill-mode: forwards;
 }
 
@@ -183,7 +213,7 @@ to {
     }
 
     to {
-        left: 400px;
+        left: 25vw;
     }
 }
 
@@ -206,32 +236,36 @@ to {
 
 #clouds {
     position: absolute;
+    overflow: visible;
 }
 
 #cloud1{
-    left: 4vw;
-    top: 20vh;
+    left: 7vw;
+    top: 16vh;
 }
 
 #cloud2{
-    left: 12vw;
-    top: 60vh;
+    left: 10vw;
+    top: 55vh;
 }
 
 #cloud3{
-    left: 30vw;
+    left: 35.1vw;
     top: 35vh;
+    
 }
 
 #cloud4{
-    left: 40vw;
-    top: 3vh;
+    left: 33vw;
+    top: 1vh;
+    z-index: -1;
 }
 
 #cloud5{
     
     left: 55vw;
-    top: 50vh;
+    top: 55vh;
+    z-index: -1;
 }
 
 #cloud6{
@@ -242,6 +276,32 @@ to {
 #cloud7{
     left: 85vw;
     top: 42vh;
+}
+
+#cloud8{
+    left: -69vw;
+    top: 20vh;
+}
+
+#cloud9{
+    left: -59vw;
+    top: 55vh;
+}
+
+#cloud10{
+    left: -39vw;
+    top: 35vh;
+}
+
+#cloud11{
+    left: -29vw;
+    top: 3vh;
+}
+
+#cloud12{
+    
+    left: -15.4vw;
+    top: 35vh;
 }
 
 #cloudsbackground { 
@@ -256,5 +316,6 @@ to {
     /* left: 60vw; */
     grid-column: 2;
     grid-row: 1;
+    z-index: 2;
 }
 
