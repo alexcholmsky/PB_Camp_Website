@@ -75,8 +75,8 @@
     }
 
     to {
-        height: 71vh;
-        width: 30vw;
+        height: 80vh;
+        width: 40vw;
         top: 2vh;
     }
 }
@@ -135,7 +135,7 @@
         opacity: 0;
     }
 
-    50% {
+    90% {
         opacity: 0;
     }
     
@@ -169,15 +169,15 @@
     
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
     grid-auto-rows: minmax(100px, auto);
-    height:72vh;
+    height:100%;
+
     /* position: relative; */
 }
 
 .grid > div {
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
  
   }
 
@@ -190,8 +190,12 @@
 .profile {
     position: absolute;
     top: 33vh;
+    width: 30vw;
     color: black;
-    font-size: small;
+    font-size: 13px;
+    border: 3px solid black;
+    padding: 2px;
+    border-radius: 15px;
 
 }
 
@@ -213,7 +217,7 @@
     }
 
     to {
-        left: 25vw;
+        left: 70vw;
     }
 }
 
@@ -237,6 +241,7 @@
 #clouds {
     position: absolute;
     overflow: visible;
+    
 }
 
 #cloud1{
@@ -284,13 +289,14 @@
 }
 
 #cloud9{
-    left: -59vw;
+    left: -66vw;
     top: 55vh;
 }
 
 #cloud10{
     left: -39vw;
-    top: 35vh;
+    top: 40vh;
+    z-index: -1;
 }
 
 #cloud11{
